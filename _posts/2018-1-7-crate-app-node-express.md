@@ -68,3 +68,33 @@ Express server listening on port 443
 $ npm install pug --save
 ```
 
+Я добавил одну новую строчку строчку в **app.js**, и немножко именил старую функцию //app.get//
+```javascript
+app.set('view engine', 'pug'); //объявление шаблонизатора
+
+app.get('/', function (req, res) {
+  res.render('index', { title: 'Knight Talks', message: 'o___O'});
+});
+```
+
+В каталоге проекта создал папку **views** а в ней файл **index.pug** следующего содержания (собственно сам шаблон):
+```
+html
+  head
+    title!= title
+  body
+    h1!= message
+```
+
+Волшебным образом всё это превратилось в:
+```
+<html>
+	<head>
+		<title>Knight Talks</title>
+	</head>
+	<body>
+		<h1>o___O</h1>
+	</body>
+</html>
+```
+
