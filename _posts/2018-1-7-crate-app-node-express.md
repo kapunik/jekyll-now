@@ -3,18 +3,25 @@ layout: post
 title: Мое первое приложение на node.js + express + socket.io
 ---
 
+Первым делом, мне было необходимо выяснить, как же выкатить сайт на протоколе **https://**
+Я собираюсь в будущем использовать веб-сокеты, и непомешало бы ипользовать их на протоколе **wss://**
+
+Как запустить сервер на 3000 порту, я выснил из "Hello World!" с официального сайта Экспресса. 
+
+Для того что-бы найти решение для порта 443, пришлось покопать документацию. И вот что я там накопал:
+
 Я создал файлик **app.js** со следующим содержанием:
 ```javascript
-var fs = require('fs'),
-    https = require('https'),
+var fs = require('fs'), // модуль для работы с файловой системой сервера
+    https = require('https'), 
     express = require('express');
 
 var port = 443;
 var app = express();
 
 var options = {
-    key: fs.readFileSync('/var/www/cert/ca.key'),
-    cert: fs.readFileSync('/var/www/cert/ca.crt'),
+    key: fs.readFileSync('/var/www/cert/ca.key'), 	// ключ и сертификат, которые я выпустил
+    cert: fs.readFileSync('/var/www/cert/ca.crt'), 	// для своего сайта, при помощи Let's Encrypt
     requestCert: true
 };
 
@@ -54,5 +61,10 @@ Error: listen EACCES 0.0.0.0:443
 $ sudo nodejs app.js
 Express server listening on port 443
 ```
+# Шаблонизатор
 
+В роли шаблонизатора я собираюсь использовать **Pug**
+```bash
+$ npm install pug --save
+```
 
