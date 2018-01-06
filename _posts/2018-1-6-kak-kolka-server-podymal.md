@@ -170,7 +170,7 @@ $  sudo apt-get install nodejs
 $  sudo apt-get install npm
 ```
 при установке NPM вылезло вот это
-
+![Error](/images/error.png)
 Я нажал ОК (Энтер), там что-то установилось/переустановилось, ошибок не выкатило. Ок.
 
 Проверка:
@@ -199,7 +199,7 @@ $ npm install express --save
 ```
 Иду на страничку Экспресса http://expressjs.com/ru/starter/hello-world.html
 Копирую от туда всё как там написано. Создаю файлик app.js со следующим содержанием:
-```
+```javascript
 var express = require('express');
 var app = express();
 
@@ -222,3 +222,4 @@ Example app listening on port 3000!
 ```
 Перешел по адресу мой.домен:3000
 Ура! Работает =)
+![Hello World](/images/helloworld.png)
