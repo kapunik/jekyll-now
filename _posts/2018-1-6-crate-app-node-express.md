@@ -31,6 +31,7 @@ server.listen(port, function() {
 
 В консоли, для запуска приложения на портах 80/443, нужно запускать ноду через **sudo**. Я до этого не сразу допёр, и минут 10 не мог понять, почему же не работает? В консоли выкатывало вот эти ошибки:
 ```bash
+$ nodejs app.js
 events.js:141
       throw er; // Unhandled 'error' event
       ^
@@ -46,6 +47,12 @@ Error: listen EACCES 0.0.0.0:443
     at Object.Module._extensions..js (module.js:417:10)
     at Module.load (module.js:344:32)
     at Function.Module._load (module.js:301:12)
+```
+
+После перезапуска с sudo - всё ок:
+```bash
+$ sudo nodejs app.js
+Express server listening on port 443
 ```
 
 
