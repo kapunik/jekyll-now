@@ -171,6 +171,7 @@ $  sudo apt-get install npm
 ```
 при установке NPM вылезло вот это
 ![Error](/images/error.png)
+
 Я нажал ОК (Энтер), там что-то установилось/переустановилось, ошибок не выкатило. Ок.
 
 Проверка:
@@ -222,4 +223,5 @@ Example app listening on port 3000!
 ```
 Перешел по адресу мой.домен:3000
 Ура! Работает =)
+
 ![Hello World](/images/helloworld.png)
