@@ -78,7 +78,7 @@ app.get('/', function (req, res) {
 ```
 
 В каталоге проекта создал папку **views** а в ней файл **index.pug** следующего содержания (собственно сам шаблон):
-```
+```html
 html
   head
     title!= title
@@ -87,7 +87,7 @@ html
 ```
 
 Волшебным образом всё это превратилось в:
-```
+```html
 <html>
 	<head>
 		<title>Knight Talks</title>
@@ -97,4 +97,5 @@ html
 	</body>
 </html>
 ```
+![o_O](/images/o_O.png)
 
